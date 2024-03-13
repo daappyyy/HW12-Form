@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix::after{
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+/* PAGE */
+input:focus{
+    outline: none;
+}
+body{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/background.jpg) no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 340px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 60px 0 0;
+}
+.form-wrapper{
+    width: 496px;
+    margin-left: auto;
+    background: rgba(233, 233, 233, 0.25);
+    backdrop-filter: blur(5px);
+}
+.hidden{
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+}
+.switch{
+    margin-bottom: 75px;
+}
+.form-title{
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 29px;
+}
+.inputInfo{
+    min-width: 340px;
+    border-radius: 30px;
+    background: #929191;
+    padding: 15px 20px;
+    border: none;
+}
+.inputInfo-wrapper{
+    text-align: center;
+}
+.inputInfo.email{
+    margin-bottom: 15px;
+}
+.inputInfo.password{
+    margin-bottom: 21px;
+}
+::placeholder{
+    color: #FFF;;
+}
+.password-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.forgot{
+    color: #153416;
+}
+.sign-in{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 153px;
+    border-radius: 30px;
+    background: #153416;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.sign-in:active{
+    background: #193d19;
+}
+.signingUp-wrapper{
+    margin: 0 auto;
+    max-width: 237px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.signUp{
+    color: #fff;
+}
+.socialDesc{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.agree-wrapper input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.agree-wrapper label{
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 23px;
+    position: relative;
+    color: #FFF;
+    
+}
+.agree-wrapper label::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid #D9D9D9;
+}
+.agree-wrapper input:checked + label::before{
+    background: #153416 url(../images/tick.svg) no-repeat center;
+    border: #153416;
+}
+.switchBlock{
+    margin-bottom: 75px;
+}
+.switchBlock input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.switchBlock label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 340px;
+    height: 34px;
+    border-radius: 30px;
+    border: 1px solid #153416;
+    cursor: pointer;
+
+}
+.switchBlock label::before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 15.5px 84px;
+    border-radius: 30px;
+    background: #153416;
+    transition: .3s ease-in-out;
+}
+.switchBlock input:checked + label::before{
+    left: calc(100% - 168.5px);
+}
+.switchBlock span{
+    flex: 1 1 50%;
+    color: #FFF;
+    z-index: 1;
+    text-align: center;
+}
